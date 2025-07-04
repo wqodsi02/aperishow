@@ -14,28 +14,43 @@
       font-family: 'Poppins', sans-serif;
     }
     .hero {
+      position: relative;
       height: 100vh;
       width: 100%;
-      background-image: url('images/aperishow-69-scaled.webp'); /* Carica l'immagine in /images/background.webp */
+      background-image: url('images/background.webp'); /* Carica l'immagine in /images/background.webp */
       background-size: cover;
       background-position: center;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+    }
+    /* Overlay nero con opacità 0.3 */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
     }
     .btn {
+      position: relative;
+      z-index: 2;
       display: inline-block;
       padding: clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
       font-size: clamp(1rem, 2.5vw, 1.5rem);
       font-weight: 600;
       text-decoration: none;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.6);
+      color: #FFFFFF;
+      background-color: #FE3C31;
       border-radius: 20px;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .btn:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: #D73228;
       transform: translateY(-2px);
     }
     .btn:active {
