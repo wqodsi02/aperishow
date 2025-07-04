@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Aperishow</title>
+  <!-- Import Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      font-family: 'Poppins', sans-serif;
     }
     .hero {
       height: 100vh;
       width: 100%;
-      background-image: url('images/aperishow-69-scaled.webp'); /* Carica l'immagine in /images/background.jpg */
+      background-image: url('images/aperishow-69-scaled.webp'); /* Carica l'immagine in /images/background.webp */
       background-size: cover;
       background-position: center;
       display: flex;
@@ -21,16 +24,22 @@
       align-items: center;
     }
     .btn {
-      padding: 15px 30px;
-      font-size: 1.2rem;
+      display: inline-block;
+      padding: clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-weight: 600;
       text-decoration: none;
       color: #fff;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 20px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .btn:hover {
       background-color: rgba(0, 0, 0, 0.8);
+      transform: translateY(-2px);
+    }
+    .btn:active {
+      transform: translateY(0);
     }
   </style>
 </head>
